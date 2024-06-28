@@ -1,0 +1,17 @@
+{
+    "name": "Project._Scripts.Global.Manager",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3496aec47a9fb4a468c9db2a5efd1d53",
+        "GUID:37b4c7b79a1f94d4984aa6fb210ea24d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Project._Scripts.Global.EventData",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7c0bfb032c6acc149b155c07b1e19157",
+        "GUID:37b4c7b79a1f94d4984aa6fb210ea24d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

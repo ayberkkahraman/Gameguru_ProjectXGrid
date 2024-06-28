@@ -1,0 +1,16 @@
+{
+    "name": "Project._Scripts.Global.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3496aec47a9fb4a468c9db2a5efd1d53"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
