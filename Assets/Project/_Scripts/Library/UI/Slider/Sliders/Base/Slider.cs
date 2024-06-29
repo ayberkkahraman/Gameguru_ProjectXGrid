@@ -12,6 +12,7 @@ namespace Project._Scripts.Library.UI.Slider.Sliders.Base
 
     private void OnEnable()
     {
+      Debug.Log(Slider is null);
       Slider.minValue = Limits.x;
       Slider.maxValue = Limits.y;
       

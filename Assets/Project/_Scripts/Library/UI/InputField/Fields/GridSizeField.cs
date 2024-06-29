@@ -5,8 +5,13 @@ namespace Project._Scripts.Library.UI.InputField.Fields
 {
   public class GridSizeField : Base.InputField
   {
-    protected override void Change(string str) { GridGenerator.GridData.GridSize = (int)Mathf.Clamp(int.Parse(str), 3f, 24f);}
-    protected override void Submit(string str) { GridGenerator.GridData.GridSize = (int)Mathf.Clamp(int.Parse(str), 3f, 24f);}
-    protected override void End(string str){GridGenerator.GridData.GridSize = (int)Mathf.Clamp(int.Parse(str), 3f, 24f);}
+    private void Set(string str)
+    {
+      int gridSize = Mathf.Clamp(int.Parse(str), GridGenerator.GridData.MinGridSize, GridGenerator.GridData.MaxGridSize);
+      InputField.text = gridSize.ToString();
+      GridGenerator.GridData.GridSize = gridSize;
+    }
+    protected override void Submit(string str) => Set(str);
+    protected override void End(string str) => Set(str);
   }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Project._Scripts.GameCore.GridSystem.Generator
 {
+  [DefaultExecutionOrder(650)]
   public class GridGenerator : MonoBehaviour
   {
     private Camera _camera;

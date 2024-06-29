@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8c1baef97b8d8f840a03eb40fb5f4729, type: 3}
+    - {fileID: 2800000, guid: dc7e52e8ee3f9f34eb059b069d81653a, type: 3}
+    - {fileID: 21300000, guid: 9612150cbb33ebf4abaafcb0066d0c09, type: 3}
+    - {fileID: 21300000, guid: 4ce557cc090bf604999f084d5c52f88c, type: 3}
+    - {fileID: 21300000, guid: 70783f222b0c71440a082ff647835516, type: 3}
+    - {fileID: 21300000, guid: 90523fd09249fed4291cb5227e137ea0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 90523fd09249fed4291cb5227e137ea0, type: 3}
+  - {fileID: 21300000, guid: 70783f222b0c71440a082ff647835516, type: 3}
+  - {fileID: -292347535, guid: dc7e52e8ee3f9f34eb059b069d81653a, type: 3}
+  - {fileID: 21300000, guid: 8c1baef97b8d8f840a03eb40fb5f4729, type: 3}
+  - {fileID: 21300000, guid: 9612150cbb33ebf4abaafcb0066d0c09, type: 3}
+  - {fileID: 21300000, guid: 4ce557cc090bf604999f084d5c52f88c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - circle_2
+  - box_coin2
+  - Grid_RoundedSquare_0
+  - Grid_X
+  - box_map name
+  - box_coin1
+  m_RenderDataMap: {}
+  m_Tag: SpriteAtlas
+  m_IsVariant: 0

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Project._Scripts.GameCore.ScoreSystem.EventDatas;
 using UnityEngine;
 
 namespace Project._Scripts.GameCore.GridSystem
@@ -40,11 +41,11 @@ namespace Project._Scripts.GameCore.GridSystem
 
       var nodes = GridContainer.GridContainer.CheckForGrids(ActiveGrids);
       int countOfLinkedNodes = nodes.Count;
-      Debug.Log(countOfLinkedNodes);
       
       if(countOfLinkedNodes < 3) return;
 
       nodes.ToList().ForEach(x => x.OnDeSelectedHandler());
+      ScoreEventData.OnScoreChangedHandler.InvokeAll(1);
     }
     private void DeSelect()
     {
@@ -54,10 +55,7 @@ namespace Project._Scripts.GameCore.GridSystem
       NeighbourGrids.ForEach(x => x.ActiveGrids.Remove(this));
     }
 
-    private void OnMouseDown()
-    {
-      OnSelectedHandler();
-    }
+    private void OnMouseDown() => OnSelectedHandler();
     
     public void FindNeighbours(List<Grid> allGrids, float gridOffset)
     {

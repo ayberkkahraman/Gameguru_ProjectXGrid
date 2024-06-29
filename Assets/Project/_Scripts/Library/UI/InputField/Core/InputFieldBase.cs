@@ -6,7 +6,7 @@ namespace Project._Scripts.Library.UI.InputField.Core
 {
   public abstract class InputFieldBase : MonoBehaviour
   {
-    private TMP_InputField _inputField;
+    protected TMP_InputField InputField;
 
     protected Action<string> OnValueChanged;
     protected Action<string> OnSubmit;
@@ -24,7 +24,7 @@ namespace Project._Scripts.Library.UI.InputField.Core
     {
       TryGetComponent(out TMP_InputField inputField);
 
-      _inputField = inputField == null ? GetComponentInChildren<TMP_InputField>() : inputField;
+      InputField = inputField == null ? GetComponentInChildren<TMP_InputField>() : inputField;
     }
     private void SubscribeEvents()
     {
@@ -32,9 +32,9 @@ namespace Project._Scripts.Library.UI.InputField.Core
       OnSubmit += Submit;
       OnEndEdit += End;
       
-      _inputField.onValueChanged?.AddListener((param) => OnValueChanged(param));
-      _inputField.onEndEdit?.AddListener((param) => OnEndEdit(param));
-      _inputField.onSubmit?.AddListener((param) => OnSubmit(param));
+      InputField.onValueChanged?.AddListener((param) => OnValueChanged(param));
+      InputField.onEndEdit?.AddListener((param) => OnEndEdit(param));
+      InputField.onSubmit?.AddListener((param) => OnSubmit(param));
     }
     
     private void UnSubscribeEvents()

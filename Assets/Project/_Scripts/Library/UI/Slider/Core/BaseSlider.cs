@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Project._Scripts.Library.UI.Slider.Core
 {
+  [DefaultExecutionOrder(1600)]
   public abstract class BaseSlider : MonoBehaviour
   {
     protected UnityEngine.UI.Slider Slider;
