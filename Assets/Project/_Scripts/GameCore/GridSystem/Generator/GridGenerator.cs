@@ -31,17 +31,20 @@ namespace Project._Scripts.GameCore.GridSystem.Generator
       float minBorder = Mathf.Min(_gameScreenBounds.x, _gameScreenBounds.y);
       float cellSize = (minBorder - ((GridSize-1) * GridOffset)) / GridSize;
       
+      var positionOffsetX = cellSize/2 - _gameScreenBounds.x/2;
+      var positionOffsetY = -cellSize/2 + _gameScreenBounds.y/2;
+      
       for (int x = 0; x < GridSize; x++)
       {
         for (int y = 0; y < GridSize; y++)
         {
-          var positionX = transform.position.x + (x * (cellSize + GridOffset));
-          var positionY = transform.position.y + (y * (cellSize + GridOffset));
+          var positionX = positionOffsetX + (x * (cellSize + GridOffset));
+          var positionY = positionOffsetY - (y * (cellSize + GridOffset));
           SpawnGridElement(new Vector2(positionX, positionY), cellSize*Vector3.one);
         }
       }
       
-      transform.position -= new Vector3(Grids[^1].transform.position.x, Grids[^1].transform.position.y)/2;
+      // transform.position -= new Vector3(Grids[^1].transform.position.x, 0)/2;
       Grids.ForEach(x => x.Initialize(Grids, GridOffset));
       yield return null;
     }
