@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Project._Scripts.GameCore.GridSystem
 {
@@ -15,7 +13,7 @@ namespace Project._Scripts.GameCore.GridSystem
     
     public delegate void OnDeSelected();
     public OnDeSelected OnDeSelectedHandler;
-    
+
     public List<Grid> NeighbourGrids = new();
     public List<Grid> ActiveGrids = new();
     public bool IsActive { get; set; }
@@ -39,8 +37,14 @@ namespace Project._Scripts.GameCore.GridSystem
       _selectionMark.SetActive(true);
       
       NeighbourGrids.ForEach(x => x.ActiveGrids.Add(this));
+
+      var nodes = GridContainer.GridContainer.CheckForGrids(ActiveGrids);
+      int countOfLinkedNodes = nodes.Count;
+      Debug.Log(countOfLinkedNodes);
       
-      CheckNeighbours();
+      if(countOfLinkedNodes < 3) return;
+
+      nodes.ToList().ForEach(x => x.OnDeSelectedHandler());
     }
     private void DeSelect()
     {
@@ -48,16 +52,6 @@ namespace Project._Scripts.GameCore.GridSystem
       _selectionMark.SetActive(false);
       
       NeighbourGrids.ForEach(x => x.ActiveGrids.Remove(this));
-    }
-
-    private void CheckNeighbours()
-    {
-      bool condition = false;
-      
-      while (ActiveGrids.Count != 0)
-      {
-         
-      }
     }
 
     private void OnMouseDown()

@@ -143,11 +143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488977145422384766, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7488977145422384766, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7488977145422384766, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
       propertyPath: m_LocalPosition.y
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1639236833}
   - component: {fileID: 1639236834}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GridGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,10 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29c74c5d0d34233840ced41abd8f22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GridPrefab: {fileID: 7488977145422384752, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
-  GridSize: 15
-  GridOffset: 0.0515
-  BorderOffset: 1
+  GridPrefab: {fileID: 94592400621264200, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
+  GridSize: 10
+  GridOffset: 0.05
+  BorderOffset: 0.176
+  Grids: []
 --- !u!1001 &1708876514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,7 +416,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10
   field of view: 60
   orthographic: 1
   orthographic size: 5
