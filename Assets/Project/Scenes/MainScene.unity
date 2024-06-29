@@ -229,6 +229,38 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1340349396}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIF_OnValueChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project._Scripts.Library.UI.Slider.Sliders.BorderOffsetSlider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444582, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_Name
+      value: BorderOffsetSlider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
 --- !u!1 &88009770
@@ -319,6 +351,7 @@ GameObject:
   - component: {fileID: 249419698}
   - component: {fileID: 249419697}
   - component: {fileID: 249419696}
+  - component: {fileID: 249419700}
   m_Layer: 5
   m_Name: InGameUI
   m_TagString: Untagged
@@ -409,6 +442,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &249419700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249419695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb7caace1854a7a87c962489f79ae95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GridOffsetSlider: {fileID: 0}
+  BorderOffsetSlider: {fileID: 0}
+  GridSizeFiled: {fileID: 0}
+--- !u!114 &311558682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6825335320199999671, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+  m_PrefabInstance: {fileID: 85856338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &463249428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -662,6 +721,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &1177871413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6825335320199999671, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+  m_PrefabInstance: {fileID: 2892453452545134948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1206495491
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +815,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1206495494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1639236834}
+        m_TargetAssemblyTypeName: Project._Scripts.GameCore.GridSystem.Generator.GridGenerator,
+          Assembly-CSharp
+        m_MethodName: UIF_GenerateGrid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1206495494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,11 +867,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206495491}
   m_CullTransparentMesh: 1
+--- !u!1 &1340349394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2892453453286562192, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+  m_PrefabInstance: {fileID: 85856338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1340349395 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2892453453286562193, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
   m_PrefabInstance: {fileID: 85856338}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340349396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340349394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42e3968e2f64d52ba9e91ffb19764d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Limits: {x: 0.2, y: 1}
+  ValueText: {fileID: 311558682}
 --- !u!1001 &1368441095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -989,11 +1091,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519272443}
   m_CullTransparentMesh: 1
+--- !u!1 &1546733812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2892453453286562192, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+  m_PrefabInstance: {fileID: 2892453452545134948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1546733813 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2892453453286562193, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
   m_PrefabInstance: {fileID: 2892453452545134948}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1546733814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546733812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab614ea3b0946d2b8cb78e2b07e877b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Limits: {x: 0, y: 0.2}
+  ValueText: {fileID: 1177871413}
 --- !u!1 &1639236831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,9 +1160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GridPrefab: {fileID: 94592400621264200, guid: 66cbfa19611e57c4a8cf2109aa9e4828, type: 3}
-  GridSize: 3
-  GridOffset: 0.1
-  BorderOffset: 1
 --- !u!1 &1657363294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657363295}
   - component: {fileID: 1657363296}
+  - component: {fileID: 1657363297}
   m_Layer: 5
   m_Name: Setting_GridSize
   m_TagString: Untagged
@@ -1101,6 +1220,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1657363297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657363294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b46cb2ff6143498482ab3eb9bbb23e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1708876514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,8 +1446,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 82
+  m_fontSizeBase: 82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1512,7 +1643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: size
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1990,6 +2121,34 @@ PrefabInstance:
     - target: {fileID: 2892453453326590225, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1546733814}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIF_OnValueChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project._Scripts.Library.UI.Slider.Sliders.GridOffsetSlider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892453454130444576, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01830b5aa972bf74c916d3a380763115, type: 3}
