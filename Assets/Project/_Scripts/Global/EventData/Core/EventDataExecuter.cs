@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Project._Scripts.Global.Manager.ManagerClasses;
 using UnityEngine;
 

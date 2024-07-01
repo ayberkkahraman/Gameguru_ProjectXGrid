@@ -7,7 +7,7 @@ namespace Project._Scripts.GameCore.ScoreSystem.EventDatas
   [CreateAssetMenu(fileName = "Score", menuName = "GameCore/EventData/Score")]
   public class ScoreEventData : EventData
   {
-    public static int CurrentScore { get; set; }
+    public static int CurrentScore { get; set; } //Holds the current score of the game
 
     public delegate void OnScoreChanged(int value);
     public static CustomDelegate<OnScoreChanged> OnScoreChangedHandler;

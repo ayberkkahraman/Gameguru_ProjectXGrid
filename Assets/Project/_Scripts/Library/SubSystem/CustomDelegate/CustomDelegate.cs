@@ -5,38 +5,42 @@ namespace Project._Scripts.Library.SubSystem.CustomDelegate
 {
   public class CustomDelegate<T>
   {
-    private SortedDictionary<int, List<T>> delegates = new SortedDictionary<int, List<T>>();
+    private readonly SortedDictionary<int, List<T>> _delegates = new(); //Holds the delegates with desired priorities
 
     public void AddDelegate(T del, int priority)
     {
-      if (!delegates.ContainsKey(priority))
+      if (!_delegates.ContainsKey(priority))
       {
-        delegates[priority] = new List<T>();
+        _delegates[priority] = new List<T>();
       }
-      delegates[priority].Add(del);
+      _delegates[priority].Add(del);
     }
 
     public void RemoveDelegate(T del)
     {
-      foreach (var key in delegates.Keys)
+      foreach (var key in _delegates.Keys)
       {
-        if (delegates[key].Contains(del))
+        if (!_delegates[key].Contains(del))
+          continue;
+        
+        _delegates[key].Remove(del);
+        if (_delegates[key].Count == 0)
         {
-          delegates[key].Remove(del);
-          if (delegates[key].Count == 0)
-          {
-            delegates.Remove(key);
-          }
-          break;
+          _delegates.Remove(key);
         }
+        break;
       }
     }
 
+    /// <summary>
+    /// Invokes the given delegates with their invoke priorities
+    /// </summary>
+    /// <param name="args"></param>
     public void InvokeAll(params object[] args)
     {
-      foreach (var priority in delegates.Keys)
+      foreach (var priority in _delegates.Keys)
       {
-        foreach (var del in delegates[priority])
+        foreach (var del in _delegates[priority])
         {
           ((Delegate)(object)del).DynamicInvoke(args);
         }

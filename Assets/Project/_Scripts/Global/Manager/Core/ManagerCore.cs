@@ -33,23 +33,9 @@ namespace Project._Scripts.Global.Manager.Core
         //FINDS THE INSTANCE FOR ASSIGNING TO ACCESS
         return Managers.Find(x => x as T != null) as T;
       }
-      // else { Debug.LogError($"Managers list not contains the **{typeof(T)}**");
+      Debug.LogError($"Managers list not contains the **{typeof(T)}**");
+
       return null;
-    }
-  
-    public void AddInstance<T>(T instance) where T : MonoBehaviour
-    {
-      Managers.Add(instance);
-    }
-
-    public MonoBehaviour GetSpesificInstance<T>(T instance) where T : MonoBehaviour
-    {
-      return Managers.Find(x => x == instance);
-    }
-
-    public void RemoveInstance<T>(T instance) where T : MonoBehaviour
-    {
-      Managers.Remove(instance);
     }
   }
 }
